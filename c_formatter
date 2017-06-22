@@ -1,0 +1,31 @@
+#!/bin/bash
+# indent:
+#   -st    = to standard out
+#   -nut   = use spaces instead of tabs
+#   -i4    = indent using 4 spaces
+#   -c49   = put comments after code at column 49 (4 * 12 + 1)
+#   -cd49  = put comments after declarations at column 49 (4 * 12 + 1)
+#   -cp49  = put comments after #else and #endif at column 49 (4 * 12 + 1)
+#   -d2    = unindent comments in code blocks by 2 spaces
+#   -lc120 = max comment length = 120 chars
+#   -fca   = format all comments
+#   -bap   = put a new line after a function (procedure)
+#   -bad   = put a new line after a declaration block
+#   -ss    = for a one line 'for' or 'while' statement force a space before the ';'
+#   -bl    = put the { on a new line after if, for and while statements, otherwise use br
+#   -bli0  = put 0 extra spaces before the { on the newline
+#   -cli4  = indent case labels by 4 spaces
+#   -cbi0  = indent case brackets at same column as the case label
+#   -di24  = put variable names at column 24 (4 * 6)
+#   -bc    = force a new line after a comma in declarations
+#   -nbfda = do not break the line before all arguments in a declaration
+#   -nbfde = do not break the line after all arguments in a declaration
+#   -bls   = put the braces after a struct declaration on a new line
+#   -lp    = line up continued lines at parentheses
+#   -npsl  = do not put function return value on separate line (vs -psl)
+#   -ce    = cuddle else statements with the brace
+#   -bbo   = break before a boolean operator
+#   -npcs  = do not put a space after the function name when invoked
+#   -hnl   = honour new lines in the code, try to break on the same lines
+# indent -st -nut -i4 -c49 -cd49 -cp49 -d2 -lc120 -fca -bap -bad -ss -cdb -sc -bl -bli0 -cli4 -cbi0 -di24 -bc -nbfda -nbfde -bls -lp -npsl -ce -bbo -npcs -hnl c_bad_style.c
+indent -st -nut -i4 -c49 -cd49 -cp49 -d2 -lc120 -fca -bap -bad -ss -cdb -sc -br -cli4 -cbi0 -di24 -bc -nbfda -nbfde -bls -lp -npsl -ce -bbo -npcs -hnl c_bad_style.c
